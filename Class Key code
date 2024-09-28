@@ -1,0 +1,113 @@
+# I am creating a class to handle key information
+class Key:
+   """This is the class I am using to store key and room details."""
+
+
+   # In this constructor, I define the attributes for key information
+   def __init__(self, keynumber="", roomnumber="", checkindate="", guestname="", reservationstatus="", keystatus=""):
+       # These are my private attributes for storing key details
+       self.__keynumber = keynumber
+       self.__roomnumber = roomnumber
+       self.__checkindate = checkindate
+       self.__guestname = guestname
+       self.__reservationstatus = reservationstatus
+       self.__keystatus = keystatus
+
+
+   # I use this method to get the key number
+   def get_keynumber(self):
+       return self.__keynumber
+
+
+   # I use this method to get the room number
+   def get_roomnumber(self):
+       return self.__roomnumber
+
+
+   # I use this method to get the check-in date
+   def get_checkindate(self):
+       return self.__checkindate
+
+
+   # This method helps me get the guest name
+   def get_guestname(self):
+       return self.__guestname
+
+
+   # I use this method to get the reservation status
+   def get_reservationstatus(self):
+       return self.__reservationstatus
+
+
+   # This method allows me to get the key status
+   def get_keystatus(self):
+       return self.__keystatus
+
+
+   # I use this method to set or update the key number
+   def set_keynumber(self, keynumber):
+       self.__keynumber = keynumber
+
+
+   # I use this method to set or update the room number
+   def set_roomnumber(self, roomnumber):
+       self.__roomnumber = roomnumber
+
+
+   # This method allows me to set the check-in date
+   def set_checkindate(self, checkindate):
+       self.__checkindate = checkindate
+
+
+   # I use this method to update the guest name
+   def set_guestname(self, guestname):
+       self.__guestname = guestname
+
+
+   # I use this method to update the reservation status
+   def set_reservationstatus(self, reservationstatus):
+       self.__reservationstatus = reservationstatus
+
+
+   # This method allows me to set or update the key status
+   def set_keystatus(self, keystatus):
+       self.__keystatus = keystatus
+
+
+   # I created this method to display the key details neatly
+   def display_key_details(self):
+       # I’m using f-strings here to format and display all the key details
+       print(f"Key Number: {self.__keynumber}")
+       print(f"Room Number: {self.__roomnumber}")
+       print(f"Check-In Date: {self.__checkindate}")
+       print(f"Guest Name: {self.__guestname}")
+       print(f"Reservation Status: {self.__reservationstatus}")
+       print(f"Key Status: {self.__keystatus}")
+
+
+
+
+# Now, I create an object of the Key class with details for a guest
+key_info = Key(
+   keynumber="K12345",
+   roomnumber="101",
+   checkindate="2024-09-22",
+   guestname="Ahmad Ali",
+   reservationstatus="Confirmed",
+   keystatus="Active"
+)
+
+
+# I display the key details using the method I defined earlier
+key_info.display_key_details()
+
+
+# I use the setter methods to update the key number and room number if needed
+# For example, I’m changing the key number to "K54321" and the room number to "102"
+key_info.set_keynumber("K54321")
+key_info.set_roomnumber("102")
+
+
+# I’m displaying the updated key details to confirm the changes worked
+print("\nUpdated Key Details:")
+key_info.display_key_details()
