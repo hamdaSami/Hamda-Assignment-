@@ -1,0 +1,111 @@
+# I am creating a class to handle booking information
+class Reservation:
+   """This is the class I am using to store booking and room details."""
+
+
+   # In this constructor, I define the attributes for booking information
+   def __init__(self, bookingid="", roomnumber="", customername="", bookingstatus="", numberofnights=0, numberofguests=0):
+       # These are my private attributes for storing booking details
+       self.__bookingid = bookingid
+       self.__roomnumber = roomnumber
+       self.__customername = customername
+       self.__bookingstatus = bookingstatus
+       self.__numberofnights = numberofnights
+       self.__numberofguests = numberofguests
+
+
+   # I use this method to get the booking ID
+   def get_bookingid(self):
+       return self.__bookingid
+
+
+   # I use this method to get the room number
+   def get_roomnumber(self):
+       return self.__roomnumber
+
+
+   # This method helps me retrieve the customer's name
+   def get_customername(self):
+       return self.__customername
+
+
+   # I use this method to get the booking status
+   def get_bookingstatus(self):
+       return self.__bookingstatus
+ # This method allows me to get the number of nights for the booking
+   def get_numberofnights(self):
+       return self.__numberofnights
+
+
+   # I use this method to get the number of guests
+   def get_numberofguests(self):
+       return self.__numberofguests
+
+
+   # I use this method to set or update the booking ID
+   def set_bookingid(self, bookingid):
+       self.__bookingid = bookingid
+
+
+   # I use this method to set or update the room number
+   def set_roomnumber(self, roomnumber):
+       self.__roomnumber = roomnumber
+
+
+   # This method allows me to set or update the customer's name
+   def set_customername(self, customername):
+       self.__customername = customername
+
+
+   # I use this method to update the booking status
+   def set_bookingstatus(self, bookingstatus):
+       self.__bookingstatus = bookingstatus
+
+
+   # This method allows me to set the number of nights for the booking
+   def set_numberofnights(self, numberofnights):
+ self.__numberofnights = numberofnights
+
+
+   # I use this method to update the number of guests for the booking
+   def set_numberofguests(self, numberofguests):
+       self.__numberofguests = numberofguests
+
+
+   # I created this method to display the booking details neatly
+   def display_booking_details(self):
+# I’m using f-strings here to format and display all the booking details
+       print(f"Booking ID: {self.__bookingid}")
+       print(f"Room Number: {self.__roomnumber}")
+       print(f"Customer Name: {self.__customername}")
+       print(f"Booking Status: {self.__bookingstatus}")
+       print(f"Number of Nights: {self.__numberofnights}")
+       print(f"Number of Guests: {self.__numberofguests}")
+
+
+
+
+# Now, I create an object of the Booking class with details for a guest
+booking_info = Reservation(
+   bookingid="B12345",
+   roomnumber="101",
+   customername="Ahmad Ali",
+   bookingstatus="Confirmed",
+   numberofnights=3,
+   numberofguests=2
+)
+
+
+# I display the booking details using the method I defined earlier
+booking_info.display_booking_details()
+
+
+# I use the setter methods to update the booking ID and room number if needed
+# For example  I’m changing the booking ID to "B54321" and the room number to "102"
+booking_info.set_bookingid("B54321")
+booking_info.set_roomnumber("102")
+
+
+# I’m displaying the updated booking details to confirm the changes worked
+print("\nUpdated Booking Details:")
+booking_info.display_booking_details()
