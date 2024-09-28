@@ -1,0 +1,125 @@
+# I am creating a class to handle payment information
+class Payment:
+   """This is the class I am using to store payment and transaction details."""
+
+
+   # In this constructor, I define the attributes for payment information
+   def __init__(self, paymentid=0, paymentstatus=" ", paymentamount=0.0, paymentdate=" ", cardtype=" ", currency=" ", taxamount=0.0):
+       # These are my private attributes for storing payment details
+       self.__paymentid = paymentid
+       self.__paymentstatus = paymentstatus
+       self.__paymentamount = paymentamount
+       self.__paymentdate = paymentdate
+       self.__cardtype = cardtype
+       self.__currency = currency  # it could be USD or AED but I picked  AED
+       self.__taxamount = taxamount
+
+
+   # I use this method to get the payment ID
+   def get_paymentid(self):
+       return self.__paymentid
+
+
+   # This method allows me to get the current payment status
+   def get_paymentstatus(self):
+       return self.__paymentstatus
+
+
+   # This method helps me retrieve the total payment amount
+   def get_paymentamount(self):
+       return self.__paymentamount
+
+
+   # Here, I can get the payment date using this method
+   def get_paymentdate(self):
+       return self.__paymentdate
+
+
+   # I use this method to get the card type used for the payment
+   def get_cardtype(self):
+       return self.__cardtype
+
+
+   # This method allows me to retrieve the currency used for the payment
+   def get_currency(self):
+       return self.__currency
+
+
+   # This method lets me get the tax amount applied to the payment
+   def get_taxamount(self):
+       return self.__taxamount
+
+
+   # I use this method to set or update the payment ID
+   def set_paymentid(self, paymentid):
+       self.__paymentid = paymentid
+
+
+   # I use this method to update the payment status
+   def set_paymentstatus(self, paymentstatus):
+       self.__paymentstatus = paymentstatus
+
+
+   # This method allows me to set the payment amount
+   def set_paymentamount(self, paymentamount):
+       self.__paymentamount = paymentamount
+
+
+   # I use this method to update the payment date
+   def set_paymentdate(self, paymentdate):
+       self.__paymentdate = paymentdate
+
+
+   # I use this method to update the card type used for the payment
+   def set_cardtype(self, cardtype):
+       self.__cardtype = cardtype
+
+
+   # This method allows me to update the currency used in the payment
+   def set_currency(self, currency):
+       self.__currency = currency
+
+
+   # I use this method to set the tax amount for the payment
+   def set_taxamount(self, taxamount):
+       self.__taxamount = taxamount
+
+
+   # I created this method to display the payment details neatly
+   def display_payment_details(self):
+       # I’m using f-strings here to format and display all the payment information
+       print(f"Payment ID: {self.__paymentid}")
+       print(f"Payment Status: {self.__paymentstatus}")
+       print(f"Payment Amount: {self.__paymentamount}")
+       print(f"Payment Date: {self.__paymentdate}")
+       print(f"Card Type: {self.__cardtype}")
+       print(f"Currency: {self.__currency}")
+       print(f"Tax Amount: {self.__taxamount}")
+
+
+
+
+# Creating an object with the payment information I have
+payment_info = Payment(
+   paymentid="P12345",
+   paymentstatus="Completed",
+   paymentamount=200.00,
+   paymentdate="2024-09-22",
+   cardtype="Visa",
+   currency="AED",  # I set the currency to AED
+   taxamount=15.00
+)
+
+
+# Displaying the payment details using the method I defined earlier
+payment_info.display_payment_details()
+
+
+# I use the setter methods to update the payment ID if needed
+# For example, I'm changing the payment ID to "P54321"
+payment_info.set_paymentid("P54321")
+
+
+# Displaying the updated payment details to confirm the changes worked
+print("\nUpdated Payment Details:")
+payment_info.display_payment_details()
