@@ -1,0 +1,115 @@
+# I am creating a class to handle personal information
+class Personal:
+   """This is the class I am using to store personal details."""
+
+
+   # I define the attributes for personal information and mention if they are string or int
+   def __init__(self, fullname="", age=0, dateofbirth="", phonenumber="", email="", address=""):
+       # These are my private attributes for storing personal details
+       self.__fullname = fullname
+       self.__age = age
+       self.__dateofbirth = dateofbirth
+       self.__phonenumber = phonenumber
+       self.__email = email
+       self.__address = address
+
+
+   # I use this method to get the full name
+   def get_fullname(self):
+       return self.__fullname
+
+
+   # This method allows me to get the current age
+   def get_age(self):
+       return self.__age
+
+
+   # This method helps me retrieve the date of birth
+   def get_dateofbirth(self):
+       return self.__dateofbirth
+
+
+   # Here, I can get the phone number using this method
+   def get_phonenumber(self):
+       return self.__phonenumber
+
+
+   # I use this method to get the email address
+   def get_email(self):
+       return self.__email
+
+
+   # This method allows me to retrieve the home address
+   def get_address(self):
+       return self.__address
+
+
+   # I use this method to set or update the full name
+   def set_fullname(self, fullname):
+       self.__fullname = fullname
+
+
+   # I use this method to update the age
+   def set_age(self, age):
+       self.__age = age
+
+
+   # This method allows me to set the date of birth
+   def set_dateofbirth(self, dateofbirth):
+       self.__dateofbirth = dateofbirth
+
+
+   # I use this method to update the phone number
+   def set_phonenumber(self, phonenumber):
+       self.__phonenumber = phonenumber
+
+
+   # I use this method to update the email
+   def set_email(self, email):
+       self.__email = email
+
+
+   # This method allows me to set the home address
+   def set_address(self, address):
+       self.__address = address
+
+
+   # I created this method to display the personal details neatly
+   def display_personal_details(self):
+       # I’m using f-strings here to format and display all the personal details
+       print(f"Full Name: {self.__fullname}")
+       print(f"Age: {self.__age}")
+       print(f"Date of Birth: {self.__dateofbirth}")
+       print(f"Phone Number: {self.__phonenumber}")
+       print(f"Email: {self.__email}")
+       print(f"Address: {self.__address}")
+
+
+
+
+# Here I create an object with the personal information I have
+person_info = Personal(
+   fullname="Ahmad Ali",
+   age=29,
+   dateofbirth="1995-05-19",
+   phonenumber="97150778544",  # I added the phone number
+   email="ahmadali@gmail.com",
+   address="Al Mizhar 2"
+)
+
+
+# Now, I’ll display the personal details using the method I defined earlier
+person_info.display_personal_details()
+
+
+# I use the setter methods to update the full name if needed
+# In this case, I'm keeping the full name unchanged
+person_info.set_fullname("Ahmad Ali")
+
+
+# I’m displaying the updated personal details to confirm the details worked
+print("\nUpdated Personal Details:")
+person_info.display_personal_details()
+
+
+
