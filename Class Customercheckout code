@@ -1,0 +1,128 @@
+# I am creating a class to handle checkout confirmation information
+class Customercheckout:
+   """This is the class I am using to store checkout confirmation and room details."""
+
+
+   # In this constructor, I define the attributes for checkout confirmation
+   def __init__(self, confirmationid="", customername="", roomnumber="", checkoutdate="", totalamount=0.0, extracharges=0.0, durationofstay=0):
+       # These are my private attributes for storing checkout confirmation details
+       self.__confirmationid = confirmationid
+       self.__customername = customername
+       self.__roomnumber = roomnumber
+       self.__checkoutdate = checkoutdate
+       self.__totalamount = totalamount
+       self.__extracharges = extracharges
+       self.__durationofstay = durationofstay
+
+
+   # I use this method to get the confirmation ID
+   def get_confirmationid(self):
+       return self.__confirmationid
+
+
+   # I use this method to get the customer name
+   def get_customername(self):
+       return self.__customername
+
+
+   # This method helps me retrieve the room number
+   def get_roomnumber(self):
+       return self.__roomnumber
+
+
+   # I use this method to get the checkout date
+   def get_checkoutdate(self):
+       return self.__checkoutdate
+
+
+   # This method allows me to get the total amount
+   def get_totalamount(self):
+       return self.__totalamount
+
+
+   # I use this method to get the extra charges
+   def get_extracharges(self):
+       return self.__extracharges
+
+
+   # This method allows me to retrieve the duration of stay
+   def get_durationofstay(self):
+       return self.__durationofstay
+
+
+   # I use this method to set or update the confirmation ID
+   def set_confirmationid(self, confirmationid):
+       self.__confirmationid = confirmationid
+
+
+   # I use this method to set or update the customer name
+   def set_customername(self, customername):
+       self.__customername = customername
+
+
+   # I use this method to set or update the room number
+   def set_roomnumber(self, roomnumber):
+       self.__roomnumber = roomnumber
+
+
+   # This method allows me to set or update the checkout date
+   def set_checkoutdate(self, checkoutdate):
+       self.__checkoutdate = checkoutdate
+
+
+   # I use this method to update the total amount
+   def set_totalamount(self, totalamount):
+       self.__totalamount = totalamount
+
+
+   # I use this method to set or update the extra charges
+   def set_extracharges(self, extracharges):
+       self.__extracharges = extracharges
+
+
+   # This method allows me to update the duration of stay
+   def set_durationofstay(self, durationofstay):
+       self.__durationofstay = durationofstay
+
+
+   # I created this method to display the checkout confirmation details neatly
+   def display_checkout_details(self):
+       # I’m using f-strings here to format and display all the checkout confirmation details
+       print(f"Confirmation ID: {self.__confirmationid}")
+       print(f"Customer Name: {self.__customername}")
+       print(f"Room Number: {self.__roomnumber}")
+       print(f"Checkout Date: {self.__checkoutdate}")
+       print(f"Total Amount: {self.__totalamount}")
+       print(f"Extra Charges: {self.__extracharges}")
+       print(f"Duration of Stay: {self.__durationofstay}")
+
+
+
+
+# Now, I create an object of the Customercheckout class with details for a guest
+checkout_info = Customercheckout(
+   confirmationid="C12345",
+   customername="Ahmad Ali",
+   roomnumber="101",
+   checkoutdate="2024-09-22",
+   totalamount=500.00,
+   extracharges=50.00,
+   durationofstay=3
+)
+
+
+# I display the checkout confirmation details using the method I defined earlier
+checkout_info.display_checkout_details()
+
+
+# I use the setter methods to update the confirmation ID and room number if needed
+# For example, I’m changing the confirmation ID to "C54321" and the room number to "102"
+checkout_info.set_confirmationid("C54321")
+checkout_info.set_roomnumber("102")
+
+
+# I’m displaying the updated checkout confirmation details to confirm the changes worked
+print("\nUpdated Checkout Confirmation Details:")
+checkout_info.display_checkout_details()
+
+
